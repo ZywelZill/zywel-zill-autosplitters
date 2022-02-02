@@ -23,4 +23,4 @@ Hyper Princess Pitch AutoSplitter to use with **LiveSplit**.
 
 ## Disclaimer
 
-This AutoSplitter have been tested several times to ensure effectiveness when running the game. However, there could be unexpected/untested bugs while using it. No problem has been found (aside [Known Issues](#known-issues)) so far, but if you managed to found any error/bug you could consider create a new [Issue](https://github.com/ZywelZill/zywel-zill-autosplitters/issues) or send me a message to my profile in [Speedrun.com](https://www.speedrun.com/user/ZywelZill).
+This AutoSplitter has been tested several times to ensure effectiveness when running the game. However, there could be unexpected/untested bugs while using it. No problem has been found (aside [Known Issues](#known-issues)) so far, but if you managed to found any error/bug you could consider create a new [Issue](https://github.com/ZywelZill/zywel-zill-autosplitters/issues) or send me a message to my profile in [Speedrun.com](https://www.speedrun.com/user/ZywelZill).
