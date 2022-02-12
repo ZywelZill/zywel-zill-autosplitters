@@ -5,6 +5,11 @@ state ("pitch gm7") {
 	// Level Internal Number
 	int level : "pitch gm7.exe", 0x1AF2F8;
 
+	// Scene Number (Menus/Levels)
+	int sceneMode : "jbfmod.dll", 0xEA64;
+
+	int gameState : "CoreMessaging.dll", 0x82014;
+
 	// First Split Checker (Only used in "start")
 	int firstSplit : "jbfmod.dll", 0x0000E884, 0x4, 0x4, 0x4, 0x4B4;
 
@@ -20,14 +25,21 @@ state ("pitch gm7") {
 
 startup {
 	// Practice Mode
-	settings.Add("isPractice", false, "Practice Mode (AutoSplitter On/Off)");
-	settings.SetToolTip("isPractice", "False by default, turn on (check) if just practicing");
+	settings.Add("isPractice", false, "Practice Mode. (AutoSplitter On/Off)");
+	settings.SetToolTip("isPractice", "Turn on (check) if just practicing. False by default.");
 }
 
 start {
 	// Starts immediately after pressing button in difficulty selection screen
 	if (!settings["isPractice"]) {
-		if (current.firstSplit != 102 && old.firstSplit == 102) {
+		if (current.firstSplit != 102 && old.firstSplit == 102 && current.firstSplit != 0) {
+			print("sceneMode: " + current.sceneMode);
+			print("level: " + current.level);
+			print("firstSplit: " + current.firstSplit);
+			print("lastSplit: " + current.lastSplit);
+			print("levelSplit: " + current.levelSplit);
+			print("gameState: " + current.gameState);
+			print("---------------------------------");
 			return true;
 		}
 	}
